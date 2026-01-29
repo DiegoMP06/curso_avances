@@ -1,0 +1,175 @@
+---
+import { Picture } from "astro:assets";
+import Hero from "../assets/hero.png";
+---
+
+<header class="header">
+    <Picture
+        class="header__hero"
+        src={Hero}
+        alt="Hero image"
+        width={1200}
+        height={600}
+        formats={["avif", "webp", "jpg"]}
+    />
+
+    <div class="header__content">
+        <div class="header__container container">
+            <div class="header__nav-container">
+                <p class="header__logo">
+                    Free<span class="header__logo--lighting">lancing</span>
+                </p>
+
+                <nav class="header__nav">
+                    <a class="header__nav-link" href="/"> Inicio </a>
+                    <a class="header__nav-link" href="/about"> Sobre Mi </a>
+                    <a class="header__nav-link" href="/blog"> Blog </a>
+                    <a class="header__nav-link" href="/contact"> Contacto </a>
+                </nav>
+            </div>
+
+            <div class="header__info">
+                <h1 class="header__name">
+                    Diego Meneses Pérez
+                </h1>
+
+                <p class="header__description">
+                    Desarrollador Web Full Stack & El Amor de tu Vida
+                </p>
+            </div>
+        </div>
+    </div>
+</header>
+
+<style>
+    .header {
+        width: 100%;
+        min-height: 45rem;
+        max-height: 55rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    @media (width >= 768px){
+        .header {
+            min-height: 40rem;
+            max-height: 45rem;
+        }
+    }
+
+    .header__hero {
+        width: 100%;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .header__content {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 1;
+    }
+
+    .header__container {
+        position: relative;
+        z-index: 2;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 4rem;
+    }
+
+    @media (width >= 768px){
+        .header__container {
+            align-items: normal;
+        }
+    }
+
+    .header__nav-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 4rem 0 1rem 0;
+    }
+
+    @media (width >= 768px) {
+        .header__nav-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    }
+
+    .header__logo {
+        font-size: 4rem;
+        color: var(--color-white);
+        font-weight: bold;
+    }
+
+    .header__logo--lighting {
+        color: var(--color-primary-300);
+        font-weight: normal;
+    }
+
+    .header__nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (width >= 768px) {
+        .header__nav {
+            flex-direction: row;
+            gap: 2rem;
+        }
+    }
+
+    .header__nav-link {
+        text-decoration: none;
+        color: var(--color-white);
+        font-size: 2.2rem;
+        font-weight: 600;
+        transition: color 0.3s ease-in-out;
+        padding: 0.5rem 1rem;
+    }
+
+    .header__nav-link:hover {
+        color: var(--color-primary-300);
+    }
+
+    .header__name {
+        color: var(--color-white);
+        font-size: 4rem;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    @media (width >= 768px){
+        .header__name {
+            font-size: 5rem;
+            text-align: left;
+        }
+    }
+
+    .header__description {
+        color: var(--color-white);
+        font-size: 2rem;
+        text-align: center;
+        background-color: var(--color-primary-700);
+        padding: 1rem 2rem;
+        border-radius: 1rem;
+        border: 0.2rem solid var(--color-primary-950);
+        display: inline-block;
+        margin: 0 0 2rem 0;
+    }
+
+    @media (width >= 768px){
+        .header__description {
+            font-size: 2.4rem;
+        }
+    }
+</style>

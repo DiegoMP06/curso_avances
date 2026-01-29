@@ -1,0 +1,119 @@
+---
+import "normalize.css";
+---
+
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width" />
+        <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+
+        <meta name="generator" content={Astro.generator} />
+        <title>Astro Basics</title>
+    </head>
+    <body>
+        <slot />
+    </body>
+</html>
+
+<style is:global>
+    :root {
+        --color-primary-50: #f4f6ef;
+        --color-primary-100: #e7eadd;
+        --color-primary-200: #d1d8be;
+        --color-primary-300: #b3bf97;
+        --color-primary-400: #8c9d66;
+        --color-primary-500: #7a8b57;
+        --color-primary-600: #5f6d43;
+        --color-primary-700: #4a5536;
+        --color-primary-800: #3d452f;
+        --color-primary-900: #353c2b;
+        --color-primary-950: #1b1f14;
+
+        --color-white: #fff;
+        --color-black: #000;
+
+        --color-gray-light: #f5f5f5;
+        --color-gray-dark: #5f5d5d;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    html {
+        font-family: "PT Sans", sans-serif;
+        box-sizing: inherit;
+        font-size: 62.5%;
+    }
+
+    body {
+        font-size: 1.6rem;
+    }
+
+    /* Utilities */
+    .container {
+        width: 90%;
+        max-width: 120rem;
+        margin: 0 auto;
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .section {
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    p, li, a {
+        font-size: 1.8rem;
+        color: var(--color-gray-dark);
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        font-weight: bold;
+        margin-top: 4rem;
+        margin-bottom: 2rem;
+        color: var(--color-gray-dark);
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    h2 {
+        font-size: 3.6rem;
+    }
+
+    h3 {
+        font-size: 3.2rem;
+    }
+
+    h4 {
+        font-size: 2.8rem;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+</style>

@@ -1,0 +1,28 @@
+---
+import {Icon} from 'astro-icon/components'
+
+type Props = {
+    title: string;
+    icon: string;
+}
+
+const {icon, title} = Astro.props
+---
+
+<div class="skill">
+    <h3 class="skill__title">
+        {title}
+    </h3>
+
+    <div class="skill_icon-container">
+        <Icon 
+            name={icon}
+            size={100}
+            class="skill__icon"
+        />
+    </div>
+
+    <p class="skill__text">
+        <slot />
+    </p>
+</div>

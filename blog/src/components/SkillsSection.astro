@@ -1,0 +1,55 @@
+---
+import SkillItem from "./SkillItem.astro";
+---
+
+<section class="skills">
+    <div class="skills__container container section">
+        <h2 class="skills__title">Skills</h2>
+
+        <div class="skills__grid">
+            <SkillItem title="Diseño UI/UX" icon="mdi:desktop-windows">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam non
+                blanditiis quibusdam magnam! Explicabo, deserunt non. Sint
+                possimus accusantium officia cupiditate autem, labore ut
+                corporis ab inventore, necessitatibus, ex dignissimos.
+            </SkillItem>
+
+            <SkillItem title="SEO" icon="mdi:search-web">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam non
+                blanditiis quibusdam magnam! Explicabo, deserunt non. Sint
+                possimus accusantium officia cupiditate autem, labore ut
+                corporis ab inventore, necessitatibus, ex dignissimos.
+            </SkillItem>
+
+            <SkillItem title="Performance" icon="mdi:performance">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam non
+                blanditiis quibusdam magnam! Explicabo, deserunt non. Sint
+                possimus accusantium officia cupiditate autem, labore ut
+                corporis ab inventore, necessitatibus, ex dignissimos.
+            </SkillItem>
+        </div>
+    </div>
+</section>
+
+<style>
+    .skills {
+        background-color: var(--color-primary-700);
+    }
+
+    .skills__title {
+        color: var(--color-white);
+        text-align: center;
+    }
+
+    .skills__grid {
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+
+    @media (width >= 768px) {
+        .skills__grid {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+</style>

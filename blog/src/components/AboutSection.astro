@@ -18,6 +18,7 @@ import AboutImage from "../assets/about.png";
                 width={434}
                 height={575}
                 formats={["avif", "webp"]}
+                class="about__image"
             />
 
             <div class="about__text-container">
@@ -48,6 +49,12 @@ import AboutImage from "../assets/about.png";
         position: relative;
         min-height: 50rem;
         overflow: hidden;
+    }
+
+    @media (width >= 768px){
+        .about {
+            min-height: 40rem;
+        }
     }
 
     .about__shape {
@@ -110,4 +117,46 @@ import AboutImage from "../assets/about.png";
         z-index: 2;
         background-color: rgb(255, 255, 255, 0.5);
     }
+
+    .about__container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+    }
+
+    @media (width >= 768px){
+        .about__container {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 4rem;
+        }
+    }
+
+    .about__image {
+        aspect-ratio: 1/1;
+        max-width: 30rem;
+        width: 100%;
+        min-width: 20rem;
+        height: auto;
+        transform: translateX(10rem) translateY(5rem);
+        margin-top: -7rem;
+        margin-bottom: -0.5rem;
+    }
+
+    @media (width >= 480px){
+        .about__image {
+            max-width: 50rem;
+            min-width: 40rem;
+        }
+    }
+
+    @media (width >= 768px){
+        .about__image {
+            min-width: 45rem;
+            transform: translateX(0) translateY(10rem);
+        }
+    }
+
 </style>

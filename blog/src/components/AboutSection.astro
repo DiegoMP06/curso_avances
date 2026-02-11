@@ -130,7 +130,7 @@ import AboutImage from "../assets/about.png";
         .about__container {
             flex-direction: row;
             justify-content: space-between;
-            gap: 4rem;
+            gap: 2rem;
         }
     }
 
@@ -147,16 +147,18 @@ import AboutImage from "../assets/about.png";
 
     @media (width >= 480px){
         .about__image {
-            max-width: 50rem;
-            min-width: 40rem;
+            max-width: 40rem;
         }
     }
 
     @media (width >= 768px){
         .about__image {
-            min-width: 45rem;
-            transform: translateX(0) translateY(10rem);
+            max-width: 35rem;
+            transform: translateX(-2rem) translateY(10rem);
         }
     }
 
+    .about__text-container {
+        flex: 1;
+    }
 </style>

@@ -14,7 +14,7 @@ const {icon, title} = Astro.props
         {title}
     </h3>
 
-    <div class="skill_icon-container">
+    <div class="skill__icon-container">
         <Icon 
             name={icon}
             size={100}
@@ -26,3 +26,32 @@ const {icon, title} = Astro.props
         <slot />
     </p>
 </div>
+
+<style>
+    .skill {
+        text-align: center;
+    }
+
+    .skill__title {
+        color: var(--color-primary-50);
+    }
+
+    .skill__icon-container {
+        background-color: var(--color-primary-950);
+        padding: 2rem;
+        border-radius: 50%;
+        max-width: 10rem;
+        aspect-ratio: 1/1;
+        margin: 0 auto;
+    }
+
+    .skill__icon {
+        height: auto;
+        width: 100%;
+        color: var(--color-primary-200);
+    }
+
+    .skill__text {
+        color: var(--color-primary-200);
+    }
+</style>

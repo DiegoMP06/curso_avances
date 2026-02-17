@@ -1,0 +1,30 @@
+---
+import { getCollection } from "astro:content";
+
+const projects = await getCollection('projects')
+
+console.log(projects)
+---
+
+<section class="blog section container">
+    <h2 class="blog__title">
+        Blog y Proyectos
+    </h2>
+
+    <div class="blog__grid">
+
+    </div>
+</section>
+
+<style>
+    .blog__title {
+        text-align: center;
+    }
+
+    .blog__grid {
+        margin-top: 4rem;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 4rem;
+    }
+</style>

@@ -1,18 +1,58 @@
 ---
 import { getCollection } from "astro:content";
+import BlogItem from './BlogItem.astro'
 
-const projects = await getCollection('projects')
+const projects = await getCollection("projects");
 
-console.log(projects)
+// function funcion1(nombre: string) {
+//     // console.log("Hola " + nombre + " Desde Funcion1")
+//     console.log(`Hola ${nombre} Desde Funcion1`)
+// }
+
+// const funcion2 = function(nombre: string) {
+//     console.log(`Hola ${nombre} Desde Funcion2`)
+// }
+
+// const funcion3 = (nombre: string) => {
+//     console.log(`Hola ${nombre} Desde Funcion3`)
+// }
+
+// const funcion4 = (nombre: string) =>
+//     console.log(`Hola ${nombre} Desde Funcion4`);
+
+// (function() {
+//     console.log('Hola Daniel desde funcion auto-nombrable 1')
+// })();
+
+// (() => {
+//     console.log('Hola Daniel desde funcion auto-nombrable 2')
+// })();
+
+// funcion1('Jaime')
+// funcion2('Jaime')
+// funcion3('Jaime')
+// funcion4('Jaime')
+
+// const llamarObjeto = () => ({
+//     name: "Juan",
+//     age: 23,
+//     sexo: "Therian",
+// });
 ---
 
 <section class="blog section container">
-    <h2 class="blog__title">
-        Blog y Proyectos
-    </h2>
+    <h2 class="blog__title">Blog y Proyectos</h2>
 
     <div class="blog__grid">
-
+        {projects.map((project) => (
+            <BlogItem project={project} />
+        ))}
+<!-- 
+        {
+            projects.map((project) => {
+                return <p>{project.data.title}</p>;
+            })
+        } -->
     </div>
 </section>
 

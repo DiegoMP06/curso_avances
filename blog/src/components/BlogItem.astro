@@ -1,0 +1,55 @@
+---
+import { Image } from "astro:assets";
+import type { CollectionEntry } from "astro:content";
+
+type Props = {
+    project: CollectionEntry<"projects">;
+};
+
+// const [uno, dos, tres, cuatro] = [1, 2, 3, 4]
+
+// const {age, name, sex} =  {
+//     name: 'Gabriel',
+//     age: 20,
+//     sex: 'Femenino',
+// }
+
+const { project } = Astro.props;
+
+const {
+    body,
+    data: { title, image, stack },
+} = project;
+
+console.log(project)
+---
+
+<div class="post">
+    <Image
+        src={`/projects/${image}`}
+        alt={`Screenshot de ${title}`}
+        width={500}
+        height={500}
+        class="post__image"
+    />
+
+    <div class="post__content">
+        <h3 class="post__title">
+            {title}
+        </h3>
+
+        <div class="post__stack">
+            {stack.map((item) => (
+                <span class="post__stack-item">
+                    {item}
+                </span>
+            ))}
+        </div>
+
+        <p class="post__text">
+            {body.substring(0, 250)}...
+        </p>
+    </div>
+</div>
+
+<style></style>

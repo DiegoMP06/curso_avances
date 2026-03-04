@@ -1,0 +1,78 @@
+---
+
+---
+<section class="section container contact" id="contact">
+    <div class="contact__container">
+        <h2 class="contact__title">
+            Contacto
+        </h2>
+        
+        <form class="contact__form">
+            <div class="contact__field">
+                <label for="name" class="contact__label">
+                    Nombre: 
+                </label>
+
+                <input 
+                    type="text" 
+                    class="contact__input" 
+                    id="name"
+                    placeholder="Escribe Tu Nombre"
+                    name="name"
+                />
+            </div>
+
+            <div class="contact__field">
+                <label for="phone_number" class="contact__label">
+                    Teléfono: 
+                </label>
+
+                <input 
+                    type="tel" 
+                    class="contact__input" 
+                    id="phone_number"
+                    placeholder="Escribe Tu Número De Teléfono"
+                    name="phone_number"
+                />
+            </div>
+            
+            <div class="contact__field">
+                <label for="email" class="contact__label">
+                    E-Mail: 
+                </label>
+
+                <input 
+                    type="email" 
+                    class="contact__input" 
+                    id="email"
+                    placeholder="Escribe Tu E-Mail"
+                    name="email"
+                />
+            </div>
+
+            
+            <div class="contact__field">
+                <label for="message" class="contact__label">
+                    E-Mensaje: 
+                </label>
+
+                <textarea 
+                    class="contact__input contact__input--textarea" 
+                    id="message"
+                    placeholder="Escribe Tu Mensaje"
+                    name="message"
+                ></textarea>
+            </div>
+
+            <button class="contact__button" type="submit">
+                Enviar
+            </button>
+        </form>
+    </div>
+</section>
+
+<style>
+    .contact__container {
+        max-width: 80rem;
+    }
+</style>
